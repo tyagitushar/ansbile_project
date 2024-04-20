@@ -1,0 +1,11 @@
+---
+
+- name: Checking os_family and distribution by ansible_facts
+  hosts: all
+  become: true
+  tasks:
+    - name: checking family
+      debug: 
+        msg: "{{ansible_facts.os_family}} and distribution is {{ansible_facts['distribution']}} ### here is variable {{test}}"
+
+
