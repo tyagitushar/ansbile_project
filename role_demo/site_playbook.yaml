@@ -1,0 +1,7 @@
+---
+
+- name: installing webserver nginx
+  hosts: all
+  become: true
+  roles:
+    - nginx
