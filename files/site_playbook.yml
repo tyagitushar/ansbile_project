@@ -1,0 +1,16 @@
+---
+  - name: Need to create file
+    hosts: CentOS
+    become: true
+    tasks:
+      - name: Crete one directory
+        ansible.builtin.file:
+          path: /ansiblecrete
+          state: directory
+          mode: u=rw,g=r,o=r
+      - name: Crete one file
+        ansible.builtin.file:
+          path: /ansiblecrete/test.txt
+          state: touch
+          mode: u=rw,g=r,o=r
+          
