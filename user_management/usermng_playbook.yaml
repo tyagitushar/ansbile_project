@@ -1,0 +1,10 @@
+---
+  - name: User Management
+    hosts: CentOS
+    become: true
+    tasks:
+      - name: Adding a user name Rahul
+        ansible.builtin.user:
+          name: John
+          shell: /sbin/nologin
+          password: "tush"
