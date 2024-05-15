@@ -1,0 +1,12 @@
+---
+  
+  - name: Editing one line in a file.
+    hosts: CentOS
+    become: true
+    tasks:
+      - name: Adding one line in file
+        ansible.inbuilt.lineinfile:
+          path: /ansiblecrete/test.txt
+          line: 'This line is edited with lineinfile module'          
+          state: present
+
