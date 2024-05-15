@@ -3,14 +3,14 @@
     hosts: CentOS
     become: true
     tasks:
-      - name: Crete one directory
+      - name: Create one directory.
         ansible.builtin.file:
-          path: /ansiblecrete
+          path: /ansiblecreate
           state: directory
           mode: u=rw,g=r,o=r
-      - name: Crete one file
+      - name: Create one file in ansible
         ansible.builtin.file:
-          path: /ansiblecrete/test.txt
+          path: /ansiblecreate/test.txt
           state: touch
           mode: u=rw,g=r,o=r
           
