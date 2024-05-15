@@ -6,7 +6,7 @@
     tasks:
       - name: Adding one line in file
         ansible.inbuilt.lineinfile:
-          path: /ansiblecrete/test.txt
+          path: /ansiblecreate/test.txt
           line: 'This line is edited with lineinfile module'          
           state: present
 
